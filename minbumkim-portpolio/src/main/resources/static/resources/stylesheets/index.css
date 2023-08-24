@@ -1,0 +1,784 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+html {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/*-------------Header(top-menu)클래스-------------------*/
+
+/*기본형 왼쪽 메뉴바*/
+.menu-bar {
+    width: 290px;
+    height: 100vh;
+    z-index: 999;
+    position: fixed;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.menu-bar>.image{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-bar>.text-items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.menu-bar>.blog-image{
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+.image > .face {
+    width: 10rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+}
+
+.image>.name{
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 500;
+    margin: 0rem 0 1.5rem 0;
+}
+
+.text-items li {
+    padding-bottom: 3rem;
+}
+
+.menu-bar>.blog-image {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    align-items: center;
+}
+
+.blog-image>.item {
+    padding: 0 0rem 2rem 0rem;
+}
+
+.top-git,
+.top-tisory {
+    width: 3rem;
+}
+
+.item > .link:link, .link:active, .link:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-bar > .text-items > .item > .link:hover {
+    color: #A4A4A4;
+}
+
+/* 깃허브 말풍선 */
+.git-bubble {
+    width: 5rem;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    margin: 0 0 8.5rem 0;
+    border-radius: 7px;
+    /* 풍선 위치 잡기*/
+    position: absolute;
+    left: 10%;
+    visibility: hidden;
+    /* 투명도 */
+}
+.git-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #333;
+    border-bottom: 0;
+    margin-left: -5px;
+    margin-bottom: -5px;
+}
+
+/* 티스토리 말풍선 */
+.tistory-bubble {
+    width: 5rem;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border-radius: 7px;
+    /* 풍선 위치 잡기*/
+    position: absolute;
+    z-index: 1;
+    margin: 0 0 8.5rem 0;
+    left:59.7%;
+    visibility: hidden;
+    /* 투명도 */
+}
+
+.tistory-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #333;
+    border-bottom: 0;
+    margin-left: -5px;
+    margin-bottom: -5px;
+}
+
+@media (max-height: 740px) {
+    /* 깃허브 말풍선 */
+    .git-bubble {
+        width: 5rem;
+        background: #333;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+        margin: 0 0rem 8.5rem 0;
+        border-radius: 7px;
+        /* 풍선 위치 잡기*/
+        position: absolute;
+        left: 8.5%;
+        visibility: hidden;
+        /* 투명도 */
+    }
+    .git-bubble::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-top-color: #333;
+        border-bottom: 0;
+        margin-left: -5px;
+        margin-bottom: -5px;
+    }
+
+    /* 티스토리 말풍선 */
+    .tistory-bubble {
+        width: 5rem;
+        background: #333;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+        border-radius: 7px;
+        /* 풍선 위치 잡기*/
+        position: absolute;
+        z-index: 1;
+        margin: 0 0 8.5rem 0;
+        left:59%;
+        visibility: hidden;
+        /* 투명도 */
+    }
+    .tistory-bubble::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-top-color: #333;
+        border-bottom: 0;
+        margin-left: -5px;
+        margin-bottom: -5px;
+    }
+}
+
+
+
+
+/*------------introduce클래스 시작-------------------------------------*/
+
+section{
+    padding: 0 0 0 290px;
+}
+
+.intro-box{
+    background-image: url('https://t1.daumcdn.net/cfile/tistory/2356853556C27BD133');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.section {
+    padding: 3.5rem 0 3.5rem 0px;
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+.section.skill {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section.project{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.section.blog {
+    background-color: white;
+}
+
+.footer {
+    padding: 1rem 0 1rem 290px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*-------------------------------------표지 구성--------------------------------------*/
+
+/*처음 표지 구성*/
+.intro-box {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    height: 100vh;
+    flex-direction: column;
+}
+
+.intro-box > .first-text {
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+}
+
+/*-----------------------------------자기 소개 화면--------------------------------------*/
+
+/*자기소개 제목*/
+.header-Text {
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: grey;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 1rem;
+    margin: 1rem 0 3rem 0;
+}
+
+/*자기소개 내용이랑 이름과 나이소개 구성하는 박스*/
+.introduce-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*자기소개글 머리글 글씨 크기및 굵기*/
+.introduce-box > .my > .intro-header {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* 자기소개글 첫번째 단락 위 아래 간격 */
+.introduce-box > .my > .first-text-box {
+    padding: 1rem 0 1.5rem 0;
+}
+
+/* 자기소개글 두번째 단락 위 아래 간격 */
+.introduce-box > .my > .second-text-box {
+    margin: 0 0 0 0.4rem;
+}
+
+.introduce-box > .my > .first-text-box > .text {
+    margin: 1.5rem 0 0 0;
+    font-size: 1.1rem;
+}
+
+/*이름 및 이메일 박스 글씨 구성*/
+.introduce-box > .school {
+    margin: 1rem 0 0rem 0;
+    padding: 0rem 5rem 0 5rem;
+}
+
+.introduce-box > .school > .privacy {
+    font-size: 1.3rem;
+    border-bottom: 1px solid #BDBDBD;
+    padding: 0 0 1rem 0;
+    margin: 0 0 1rem 0;
+}
+
+/*---------- 스킬 소개 --------------------------------------*/
+.section.skill>.text-box{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.school-box{
+    background-color: whitesmoke;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.school-box > .year{
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 0.2rem;
+    margin: 0.5rem 0 0.5rem 0.4rem;
+    padding: 0rem 0 0 0rem;
+} /* 년도 표시*/
+
+.school-box > .box-name{
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+} /* 년도 밑에 헤더 설정*/
+
+.school-box>.department{
+    font-size: 1.2rem;
+    margin: 0.5rem 0 1.3rem 0.5rem;
+    font-weight: 700;
+}
+
+.school-box>.certificate-name{
+    font-size: 1.2rem;
+    margin: 0.5rem 0 1.3rem 0.5rem;
+    font-weight: 700;
+}
+
+
+.school-box>.text{
+    font-size: 1rem;
+    margin: 0rem 0 1rem 0.5rem;
+    font-weight: 500;
+}
+
+.school-box > .text {
+    font-size: 1rem;
+    margin: 0rem 0 1rem 0.5rem;
+    font-weight: 500;
+}
+
+#SkillGraph > .graph {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#SkillGraph > .graph >.front{
+    position: relative;
+    padding: 2%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0rem 0 2rem;
+}
+
+#SkillGraph > .graph > .back{
+    position: relative;
+    padding: 2%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 2rem 0 5rem;
+}
+
+.fronts, .backs{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0rem 1rem 0rem;
+} /* 원형그래프 설정*/
+
+.fronts>.text{
+    margin: 0 0 1rem 0;
+}
+
+.backs>.text{
+    margin: 0 0 1rem 0;
+}
+
+
+.Front-header{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0rem 0 1rem 0;
+}
+
+.Back-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0rem 0 1rem 0;
+}
+
+
+/* 그래프의 머리글 중앙에 맞출려고 두 span의 크기를 맞춘다.*/
+
+.fronts > .box {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.chart {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color:  #dedede;
+
+}
+
+.center {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+.HtmlSpeech {
+    width: 9rem;
+    height: 8rem;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 5px 15px 5px;
+    border-radius: 7px;
+    /* 풍선 위치 잡기*/
+    position: absolute;
+    left: 120%; /* 투명도 */
+    visibility: hidden;
+}
+
+/* 풀선 화살표 */
+.HtmlSpeech::after {
+    content: "";
+    position: absolute;
+    border-top: 6px solid transparent;
+    border-right: 6px solid #333;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    top: 45%;
+    right: 100%;
+}
+
+.CssSpeech {
+    width: 9rem;
+    height: 8rem;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    padding: 15px 5px 15px 5px;
+
+    border-radius: 7px;
+    /* 풍선 위치 잡기*/
+    position: absolute;
+    left: 120%;
+    /* 투명도 */
+    visibility: hidden;
+
+}
+/* 풀선 화살표 */
+.CssSpeech::after {
+    content: "";
+    position: absolute;
+    border-top: 6px solid transparent;
+    border-right: 6px solid #333;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    top: 45%;
+    right: 100%;
+}
+
+.JavaScriptSpeech {
+    width: 9rem;
+    height: 8rem;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 5px 15px 5px;
+
+    border-radius: 7px;
+    /* 풍선 위치 잡기*/
+    position: absolute;
+    left: 120%;
+    /* 투명도 */
+    visibility: hidden;
+    transition-timing-function: linear;
+
+}
+/* 풀선 화살표 */
+.JavaScriptSpeech::after {
+    content: "";
+    position: absolute;
+    border-top: 6px solid transparent;
+    border-right: 6px solid #333;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    top: 45%;
+    right: 100%;
+}
+
+.JavaSpeech {
+    width: 9rem;
+    height: 8rem;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 5px 15px 5px;
+
+    border-radius: 7px;
+    /* 풍선 위치 잡기*/
+    position: absolute;
+    left: 120%;
+    /* 투명도 */
+    visibility: hidden;
+    transition-timing-function: linear;
+
+}
+/* 풀선 화살표 */
+.JavaSpeech::after {
+    content: "";
+    position: absolute;
+    border-top: 6px solid transparent;
+    border-right: 6px solid #333;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    top: 45%;
+    right: 100%;
+}
+
+.MariaSpeech {
+    width: 9rem;
+    height: 8rem;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 5px 15px 5px;
+
+    border-radius: 7px;
+    /* 풍선 위치 잡기*/
+    position: absolute;
+    z-index: 1;
+    left: 120%;
+    /* 투명도 */
+    visibility: hidden;
+    transition-timing-function: linear;
+
+}
+/* 풀선 화살표 */
+.MariaSpeech::after {
+    content: "";
+    position: absolute;
+    border-top: 6px solid transparent;
+    border-right: 6px solid #333;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    top: 45%;
+    right: 100%;
+}
+
+.SpringBootSpeech {
+    width: 9rem;
+    height: 8rem;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 5px 15px 5px;
+
+    border-radius: 7px;
+    /* 풍선 위치 잡기*/
+    position: absolute;
+    z-index: 1;
+    left: 120%;
+    /* 투명도 */
+    visibility: hidden;
+    transition-timing-function: linear;
+
+}
+/* 풀선 화살표 */
+.SpringBootSpeech::after {
+    content: "";
+    position: absolute;
+    border-top: 6px solid transparent;
+    border-right: 6px solid #333;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    top: 45%;
+    right: 100%;
+}
+
+.skill-bar{
+    display: none;
+}
+
+.skill-text{
+    display: none;
+}
+
+
+
+
+/*--------------------------프로젝트 소개----------------------------------------*/
+
+
+section >.section.project >.project-Box {
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    width: 70%;
+    margin: 1rem;
+}
+
+.project-Box > ul {
+    width: 100%;
+    margin: 1rem;
+}
+
+
+.project-Box > ul > div {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.project-Box > ul >  div > a:first-child {
+    margin-right: 1rem;
+}
+
+.project-Box > ul > li {
+    white-space: pre-line;
+    margin: 0.5rem;
+}
+
+ .project-Box > img {
+    width: 20rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+
+.project-header{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem 0 0 0;
+}
+
+.project-header.button{
+    border: 1px solid gray;
+    border-radius: 0.4rem;
+    background-color: gray;
+    padding: 0.75rem;
+    color: white;
+}
+
+.project-header.button:hover{
+    background-color: #939292;
+}
+
+
+
+/* ------------------------ 블로그 소개 ----------------------------------------*/
+
+.blog-image-box {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3rem 0 0 0;
+}
+
+/* 바닥글 블로그 이미지 배치*/
+
+.footer-Git {
+    width: 8rem;
+}
+
+.footer-Tistory {
+    width: 7.5rem;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.footer-text > .created{
+    margin: 0 1rem 0 1rem;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+

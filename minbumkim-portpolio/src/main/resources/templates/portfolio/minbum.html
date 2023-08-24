@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" th:href="@{/resources/stylesheets/index.css}">
+  <link rel="stylesheet" th:href="@{/resources/stylesheets/index-pre.css}">
+  <link rel="stylesheet" th:href="@{/resources/stylesheets/360px.css}">
+  <link rel="shortcut icon" th:href="@{/resources/images/favicon.png}">
+  <script defer th:src="@{/resources/scripts/percent.js}"></script>
+  <script defer th:src="@{/resources/scripts/1130pxPercent.js}"></script>
+  <title>김민범의 포트폴리오</title>
+</head>
+<body>
+
+<!--  메뉴바  -->
+<nav class="menu-bar">
+  <div class="image">
+    <img class="face" th:src="@{/resources/images/김민범.jpg}">
+    <p class="name">김민범</p>
+  </div>
+  <ul class="text-items">
+    <li class="item"><a class="link" href="#main">메인</a></li>
+    <li class="item"><a class="link" href="#introduce">자기소개</a></li>
+    <li class="item"><a class="link" href="#Skill">기술소개</a></li>
+    <li class="item"><a class="link" href="#Project">프로젝트</a></li>
+    <li class="item"><a class="link" href="#contact">블로그</a></li>
+  </ul>
+  <ul class="blog-image">
+    <li class="item"><a href="https://github.com/JavaStudyrecord?tab=repositories">
+      <img class="top-git" th:src="@{/resources/images/topmenu-git.png}"></a></li>
+    <span class="git-bubble">Git-Hub</span>
+
+    <li class="item"><a href="https://www.tistory.com/">
+      <img class="top-tisory" th:src="@{/resources/images/topmenu-tistory.png}"></a></li>
+    <span class="tistory-bubble">Tistory</span>
+  </ul>
+</nav>
+
+<!--  메뉴바  -->
+
+<a name="main"></a>
+<section>
+  <div class="intro-box">
+    <div class="first-text">안녕하세요</div>
+    <div class="first-text">개발자 김민범의</div>
+    <div class="first-text">포트폴리오 입니다</div>
+  </div>
+</section>
+
+
+<!--  자기 소개-->
+<a name="introduce"></a>
+<section>
+  <div class="section">
+    <p class="header-Text">자기소개</p>
+    <div class="introduce-box">
+      <div class="my">
+        <p class="intro-header">안녕하세요 신입 개발자 김민범입니다.</p>
+        <div class="first-text-box">
+          <p class="text">웹 개발을 통해 자신의 아이디어를 구현해내는 것이 즐거웠습니다</p>
+          <p class="text">대학 졸업 이후, 국비 교육을 통해 개발자의 꿈을 키웠습니다.</p>
+          <p class="text">국비교육을 마치며, 다양한 프로젝트를 경험하며 실력을 한층 더 향상시키고자 합니다</p>
+          <p class="text"> 끈질긴 노력으로 목표하는 개발자로 성장하겠습니다</p>
+        </div>
+      </div>
+      <div class="school">
+        <ul class="privacy"><span class="information"><b>이름:</b></span> 김민범</ul>
+        <ul class="privacy"><span class="information"><b>나이:</b></span> 25</ul>
+        <ul class="privacy"><span class="information"><b>이메일:</b></span> chngdch3@naver.com</ul>
+        <ul class="privacy"><span class="information"><b>전화번호:</b></span> 010-5122-1160</ul>
+        <ul class="privacy"><span class="information"><b>사는 곳:</b></span> 대구광역시 남구 대명동</ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!--학교소개랑 자격증 소개 및 스킬 그래프-->
+<a name="Skill"></a>
+<section id="Skills">
+  <div class="section skill">
+    <p class="header-Text">기술소개</p>
+    <div class="text-box">
+      <div class="school-box">
+        <span class="year">2018 ~ 2022</span>
+        <span class="box-name">대구과학대학교</span>
+        <span class="department">컴퓨터정보통신과</span>
+        <span class="text">프로그래밍에 대한 기초를</span>
+        <span class="text">배우고 학습하였습니다</span>
+      </div>
+      <div class="school-box">
+        <span class="year">2021 ~ 2022</span>
+        <span class="box-name">자격증</span>
+        <span class="department">SQLD</span>
+        <span class="text">데이터베이스의 기초를</span>
+        <span class="text"> 배우고 습득하였습니다.</span>
+      </div>
+    </div>
+    <form id="SkillGraph">
+      <div class="graph">
+        <div class="front">
+          <div class='fronts'>
+            <span class="Front-header">Front-End</span>
+            <span class="text"><b>HTML</b></span>
+            <div class="chart HtmlPerCent" id="start"><span class="center"><p id="HTML"></p>
+                        </span>
+              <span id="HtmlSpeech" class="HtmlSpeech">
+                웹 페이지를 구성하는 기본 뼈대를 만들수 있으며
+                여러 가지 요소와 태그를 이용하여 웹 페이지의 레이아웃과 콘텐츠를 구성할 수 있습니다.</span>
+            </div>
+          </div>
+
+          <div class='fronts'>
+            <span class="text"><b>CSS</b></span>
+            <div class="chart CssPerCent"><span class="center"><p id="CSS"></p>
+                        </span>
+              <span id="CssSpeech" class="CssSpeech">
+                HTML로 구조를 생성한 후, CSS를 사용하여 해당 구조에 디자인과 스타일을 적용하여 웹 페이지를 아름답고 사용자 친화적으로 만들 수 있습니다.</span>
+            </div>
+          </div>
+
+          <div class='fronts'>
+            <span class="text"><b>JavaScript</b></span>
+            <div class="chart JavaScriptPerCent"><span class="center"><p id="JavaScript"></p>
+                        </span>
+              <span id="JavaScriptSpeech" class="JavaScriptSpeech">
+                XHR을 사용하여 서버로 HTTP 요청을 보내고, 서버로 요청을 처리해 데이터를 응답으로 반환해
+                비동기적인 통신 방식으로 웹 페이지와 통신할수 있습니다</span>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class='backs'>
+            <span class="Back-header">Back-End</span>
+            <span class="text"><b>Java</b></span>
+            <div class="chart JavaPerCent"><span class="center"><p id="Java"></p>
+                        </span>
+              <span id="JavaSpeech" class="JavaSpeech">
+                              자바에서 제공하는 자료구조를 통해 데이터를 효율적으로 처리할수 있고 알고리즘을 통해 문제를 효율적으로 해결할수 있습니다.</span>
+            </div>
+          </div>
+
+          <div class='backs'>
+            <span class="text"><b>Maria-DB</b></span>
+            <div class="chart MariaDbPerCent">
+                            <span class="center"><p id="MariaDB"></p>
+                        </span><span id="MariaSpeech" class="MariaSpeech">
+                            테이블을 만들어 삽입, 삭제, 수정이 가능하고 제약조건을 통해 불필요한 자료가 입력되는 것을 방지하기 위해 여러가지 규칙을 적용할수 있습니다. </span>
+            </div>
+          </div>
+
+          <div class='backs'>
+            <span class="text"><b>SpringBoot</b></span>
+            <div class="chart SpringPerCent"><span class="center"><p id="SpringBoot"></p>
+                        </span>
+              <span id="SpringBootSpeech" class="SpringBootSpeech">
+                                스프링 부트의 MVC를 통해 백엔드와 프론트 엔드 기반의 웹페이지를 개발하고 데이터베이스를 통해 CRUD를 할수 있습니다.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form id="graph">
+      <div class="skill-bar">
+        <div class="bar-header">Front-End</div>
+        <div class="front-bar-header">
+          <span class="left">Html</span>
+          <span class="frontPercent"></span>
+        </div>
+        <div class="front-bar-header">
+        </div>
+        <div class="progress-bar">
+          <div class="front-progress">
+          </div>
+        </div>
+        <p class="front-bar-header">
+          <span class="left">CSS</span>
+          <span class="frontPercent"></span>
+        </p>
+        <div class="progress-bar">
+          <div class="front-progress">
+          </div>
+        </div>
+        <p class="front-bar-header">
+          <span class="left">JavaScript</span>
+          <span class="frontPercent"></span>
+        <div class="progress-bar">
+          <div class="front-progress">
+          </div>
+        </div>
+      </div>
+       <div class="skill-text">
+         <h1>프론트 기술 소개</h1>
+         <h1>HTML</h1>
+         <div><p>웹 페이지를 구성하는 기본 뼈대를 만들수 있으며 여러 가지 요소와 태그를 이용하여
+           웹 페이지의 레이아웃과 콘텐츠를 구성할 수 있습니다.</p></div>
+         <h1>CSS</h1>
+         <div><p> HTML로 구조를 생성한 후, CSS를 사용하여 해당 구조에 디자인과 스타일을 적용하여
+         웹 페이지를 아름답고 사용자 친화적으로 만들 수 있습니다.</p></div>
+         <h1>JavaScript</h1>
+         <div><p>XHR을 사용하여 서버로 HTTP 요청을 보내고, 서버로 요청을 처리해 데이터를 응답으로 반환해
+           비동기적인 통신 방식으로 웹 페이지와 통신할수 있습니다</p></div>
+       </div>
+      <div class="skill-bar">
+        <p class="bar-header">Back-End</p>
+        <p class="back-bar-header">
+        <p class="front-bar-header">
+          <span class="left">Java</span>
+          <span class="backPercent"></span>
+        </p>
+        <div class="progress-bar ">
+          <div class="back-progress Back">
+          </div>
+        </div>
+        <p class="back-bar-header">
+        <p class="front-bar-header">
+          <span class="left">Maria-DB</span>
+          <span class="backPercent"></span>
+        </p>
+        <div class="progress-bar">
+          <div class="back-progress Back">
+          </div>
+        </div>
+        <p class="back-bar-header">
+        <p class="front-bar-header">
+          <span class="left">SpringBoot</span>
+          <span class="backPercent"></span>
+        </p>
+        <div class="progress-bar">
+          <div class="back-progress Back">
+          </div>
+        </div>
+      </div>
+      <div class="skill-text">
+        <h1>백엔드 기술 소개</h1>
+        <h1>Java</h1>
+        <div><p>자바에서 제공하는 자료구조를 통해 데이터를 효율적으로 처리할수 있고 알고리즘을 통해 문제를 효율적으로 해결할수 있습니다.</p></div>
+        <h1>Maria-DB</h1>
+        <div><p>테이블을 만들어 삽입, 삭제, 수정이 가능하고 제약조건을 통해 불필요한 자료가 입력되는 것을 방지하기 위해 여러가지 규칙을 적용할수 있습니다. </p></div>
+        <h1>SpringBoot</h1>
+        <div><p>스프링 부트의 MVC를 통해 백엔드와 프론트 엔드 기반의 웹페이지를 개발하고 데이터베이스를 통해 CRUD를 할수 있습니다.</p></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<a name="Project"></a>
+<section>
+  <div class="section project">
+    <h2 class="header-Text">프로젝트</h2>
+    <div class="project-Box">
+      <img th:src="@{/resources/images/portfolio.png}">
+      <ul>
+        <li><h1>We-Meet</h1></li>
+        <li><h3>기간</h3></li>
+        <li>2023.06.10 ~ 2023.08.10</li>
+        <li><h3>설명</h3></li>
+        <li>관심사 기반 앱에 영감을 얻어 8개의 다양한 카테고리 속에 사람들의
+          만남의 웹 프로젝트
+        </li>
+        <li><h3>사용 기술</h3></li>
+        <li>HTML/CSS, JavaScript,Java,MariaDB, SpringBoot, MyBatis</li>
+        <div>
+          <a class="code" th:href="@{https://github.com/MinBumkim1901/wemeet}">
+            <p class="project-header button">코드 보기</p></a>
+          <a class="code" th:href="@{https://wemeet.minbumkim.com}">
+            <p class="project-header button">이동하기</p></a>
+        </div>
+      </ul>
+    </div>
+    <div class="project-Box">
+      <img th:src="@{/resources/images/project.png}">
+      <ul>
+        <li><h1>포트폴리오</h1></li>
+        <li><h3>기간</h3></li>
+        <li>2023.05.10 ~ 2023.06.10</li>
+        <li><h3>설명</h3></li>
+        <li>개인 포트폴리오 입니다</li>
+        <li><h3>사용 기술</h3></li>
+        <li>HTML/CSS, JavaScript</li>
+        <div class="link">
+          <a class="code" th:href="@{https://github.com/MinBumkim1901/wemeet}">
+            <p class="project-header button">코드 보기</p></a>
+          <a class="code" th:href="@{https://wemeet.minbumkim.com}">
+            <p class="project-header button">이동하기</p></a>
+        </div>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<a name="contact"></a>
+<section>
+  <div class="section blog">
+    <p class="header-Text">블로그</p>
+    <div class="blog-image-box">
+      <!-- 블로그 이미지 -->
+      <a href="https://github.com/JavaStudyrecord?tab=repositories"><img class="footer-Git" th:src="@{/resources/images/github.png}"></a>
+      <a href="https://www.tistory.com/"><img class="footer-Tistory" th:src="@{/resources/images/tistory.png}"></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-text">
+    <span class="created"><b>© 2023</b></span>
+  </div>
+  <div class="footer-text">
+    <span class="created"><b>Created By MinBum</b></span>
+  </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+  $(window).on('scroll', function() { //스크롤 이벤트 발생
+    var skillSection = $('#Skills');
+    var graphBar = $('.graph .chart');
+    var sectionPosition = skillSection.offset().top;
+    var graphBarPosition = graphBar.offset().top;
+    var windowHeight = $(window).height();
+    var scrollPosition = $(window).scrollTop() + windowHeight;
+
+    // 그래프바가 보일때 말풍선 fadein 2
+    if (graphBarPosition <= scrollPosition) {
+      $('.HtmlSpeech').css('visibility', 'visible').hide().fadeIn(2000);
+      $('.CssSpeech').css('visibility', 'visible').hide().fadeIn(2000);
+      $('.JavaScriptSpeech').css('visibility', 'visible').hide().fadeIn(2000);
+      $('.JavaSpeech').css('visibility', 'visible').hide().fadeIn(2000);
+      $('.MariaSpeech').css('visibility', 'visible').hide().fadeIn(2000);
+      $('.SpringBootSpeech').css('visibility', 'visible').hide().fadeIn(2000);
+
+      // 발생하고 스크롤이벤트를 제거함으로 다시 스크롤해도 이벤트 발생하지않음
+      $(window).off('scroll');
+    }
+  });
+
+  //top-git 이미지 hover시 말풍선 서서히 나타남
+  function GitFadeInOut() {
+    $('.top-git').hover(
+            function () {
+              $('.git-bubble').css('visibility', 'visible').hide().fadeIn(200);
+
+            },
+            //이미지에서 마우스를 떼면 visibility hidden이 되면서 서서히 사라짐
+            function () {
+              $('.git-bubble').fadeOut(250, function () {
+                $(this).css('visibility', 'hidden');
+              });
+            }
+    );
+  }
+
+  //위와 같은 원리
+  function TistoryFadeInOut() {
+    $('.top-tisory').hover(
+            function () {
+              $('.tistory-bubble').css('visibility', 'visible').hide().fadeIn(300);
+            },
+            function () {
+              $('.tistory-bubble').fadeOut(250, function () {
+                $(this).css('visibility', 'hidden');
+              });
+            }
+    );
+  }
+
+  function GitFilter() {
+    $('.top-git').hover(
+            function () {
+              $(this).css('transition', 'filter 0.5s').css('filter', 'brightness(70%)');
+            },
+            function () {
+              $(this).css('filter', 'none').css('transition', 'filter 1s');
+            }
+    );
+  }
+
+  function TistoryFilter() {
+    $('.top-tisory').hover(
+            function () {
+              $(this).css('transition', 'filter 0.5s').css('filter', 'brightness(70%)');
+            },
+            function () {
+              $(this).css('filter', 'none').css('transition', 'filter 1s');
+            }
+    );
+  }
+
+  GitFadeInOut(); //Git 말풍선 나타내고 사라지는 함수 호출
+  TistoryFadeInOut(); //Tistory 말풍선 나타내고 사라지는 함수 호출
+  GitFilter(); //hover시 필터 씌우고 빼면 필터 사라짐 호출
+  TistoryFilter(); //hover시 필터 씌우고 빼면 필터 사라짐 호출
+</script>
+</body>
+</html>

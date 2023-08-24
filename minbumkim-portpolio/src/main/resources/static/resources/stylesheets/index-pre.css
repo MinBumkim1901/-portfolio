@@ -1,0 +1,403 @@
+@media screen and (max-width: 1200px) {
+    /*반응형 메뉴바 상단*/
+    .menu-bar {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        z-index: 1;
+    }
+
+    h1{
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+    }
+
+    /* 표지 화면구성 */
+    .intro {
+        padding: 0 0 0rem 0;
+    }
+
+    section {
+        padding: 0px;
+    }
+
+    .footer {
+        padding: 1rem 0 1rem 0px;
+    }
+
+    /*--------------------------------------화면 구성---------------------------------*/
+    .menu-bar > .image > .face {
+        display: none;
+    }
+
+    .top menu > .image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .image > .name {
+        padding-top: 1rem;
+        padding-left: 0.5rem;
+        margin: 0.3rem 0 0rem 1rem;
+    }
+
+
+    .menu-bar > .text-items {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .menu-bar > .text-items > .item {
+        padding: 0 0.8rem 0 0;
+    }
+
+    .menu-bar > .blog-image {
+        display: none;
+    }
+
+    /*------------------------------------------------------------------------*/
+    .introduce-box {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .introduce-box > .my {
+        padding: 0 0rem 0 0rem;
+    }
+
+    /*자기소개글 머리글 글씨 크기및 굵기*/
+    .introduce-box > .my > .intro-header {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* 자기소개글 첫번째 단락 위 아래 간격 */
+    .introduce-box > .my > .first-text-box {
+        padding: 1rem 0 1rem 0;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    /* 자기소개글 두번째 단락 위 아래 간격 */
+    .introduce-box > .my > .second-text-box {
+        padding: 0rem 0 5rem 0;
+        font-size: 1.5rem;
+        text-align: center;
+
+    }
+
+    /*이름 및 이메일 박스 글씨 구성*/
+    .introduce-box > .school {
+        width: 80%;
+        padding: 0rem;
+    }
+
+    /*--------------------스킬 그래프------------------------------*/
+    .Skill {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Skill > .text-box {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        margin: 5rem 0 0 0;
+        justify-content: space-evenly;
+    }
+
+    .school-box {
+        white-space: nowrap;
+        width: 13rem;
+    }
+
+    .year {
+        font-size: 1.5rem;
+        width: 9.2rem;
+        color: black;
+        font-weight: bold;
+        border-radius: 0.2rem;
+        margin: 0.5rem 0 0.5rem 0.5rem;
+        padding: 0 0 0 0rem;
+    }
+
+    /* 년도 표시*/
+    .box-name {
+        font-size: 1.5rem;
+        margin: 0.5rem 0 1rem 0.5rem;
+    }
+
+    /* 년도 밑에 헤더 설정*/
+    .school-box > .text {
+        font-size: 1rem;
+        margin: 0rem 0 1rem 0.5rem;
+        font-weight: bold;
+    }
+
+    .school-box > .text {
+        font-size: 0.95rem;
+        margin: 0rem 0 1rem 0.5rem;
+        font-weight: bold;
+    }
+
+
+    #SkillGraph {
+        display: none;
+    }
+
+
+    .skill-bar {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 3rem 0rem 3rem 0rem;
+    }
+
+
+    .progress-bar {
+        width: 500px;
+        height: 30px;
+        background-color: lightgray;
+        overflow: hidden;
+        margin: 0rem 0 1rem 0;
+        border-radius: 0.3rem;
+    }
+
+    .front-progress {
+        height: 100%;
+        background-color: skyblue;
+        transition: width 0.5s ease-in-out;
+        width: 0%;
+    }
+
+    .back-progress {
+        height: 100%;
+        background-color: skyblue;
+        transition: width 0.5s ease-in-out;
+        width: 0%;
+    }
+
+
+    .bar-header {
+        margin: 0 0 1rem 0;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .front-bar-header {
+        margin: 0 0 0.5rem 0;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 500px;
+    }
+
+    .back-bar-header {
+        margin: 0 0 0.5rem 0;
+        font-weight: bold;
+    }
+
+    section > .section.project > .project-Box {
+        background-color: white;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        width: 85%;
+        margin: 1rem;
+    }
+
+    section > .section.project > ul > .link {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .project-Box > ul > div {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .project-Box > img {
+        display: none;
+    }
+
+    .skill-text{
+        visibility: visible;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .skill-text > div{
+        border-radius: 0.5rem;
+        width: 55%;
+        padding: 1rem;
+        background: whitesmoke;
+        margin: 1rem 0 1rem 0;
+        line-height: 30px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 650px) {
+    .section.skill>.text-box{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .school-box{
+        width: 12rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .school-box > .year{
+        color: black;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-radius: 0.2rem;
+        margin: 0.5rem 0 0.5rem 0.4rem;
+        padding: 0rem 0 0 0rem;
+    } /* 년도 표시*/
+
+    .school-box > .box-name{
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin: 0.5rem 0 0.5rem 0.5rem;
+    } /* 년도 밑에 헤더 설정*/
+
+    .school-box>.department{
+        font-size: 1rem;
+        margin: 0.5rem 0 1.3rem 0.5rem;
+        font-weight: 700;
+    }
+
+    .school-box>.certificate-name{
+        font-size: 1rem;
+        margin: 0.5rem 0 1.3rem 0.5rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 530px) {
+
+    .progress-bar{
+        width: 83.33%;
+    }
+
+    .front-bar-header {
+        margin: 0 0 0.5rem 0;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 83.33%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    /*자기소개 제목*/
+    .header-Text {
+        font-size: 2.4rem;
+    }
+
+    /*자기소개 내용이랑 이름과 나이소개 구성하는 박스*/
+    .introduce-box {
+        display: flex;
+        justify-content: space-around;
+    }
+    .image > .name{
+        font-size: 0.9rem;
+    }
+    .menu-bar > .text-items{
+        font-size: 0.9rem;
+    }
+
+    .introduce-box > .my > .intro-header{
+        font-size: 1.1rem;
+    }
+    .introduce-box > .my > .first-text-box > .text{
+        font-size: 0.9rem;
+    }
+
+    .introduce-box > .school > .privacy {
+        font-size: 1rem;
+        border-bottom: 1px solid #BDBDBD;
+        padding: 0 0 1rem 0;
+        margin: 0 0 1rem 0;
+    }
+
+    .intro-box > .first-text {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 500;
+    }
+
+    .skill-bar {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left; /* 추가된 코드 */
+    }
+
+    .project-text {
+        margin: 0rem 0 0rem 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 0.1rem;
+    }
+
+    .project-header{
+        font-size: 1.5rem;
+    }
+    .other{
+        font-size: 1rem;
+    }
+
+    .project-header.button{
+        font-size: 1rem;
+        border: 1px solid gray;
+        border-radius: 0.4rem;
+        background-color: gray;
+        padding: 0.8rem;
+        color: white;
+        margin: 1.5rem 0 1.5rem 0;
+    }
+
+    /* ------------------------------------------------------------------ */
+    .footer-Git {
+        width: 5rem;
+    }
+
+    .footer-Tistory {
+        width: 4.9rem;
+    }
+
+}
+
+
+
+
