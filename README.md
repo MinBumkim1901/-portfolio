@@ -17,7 +17,7 @@
 1. 상단 이동 스크롤 버튼
 2. 타이핑 효과
 3. 퍼센트 채우기
-   <br><br>
+   <br><br><br>
 
 ## 💄 UI 디자인
 ### 디자인
@@ -27,5 +27,4 @@
 <br><br>
 
 ### 🔗 배포 링크
-
-#### <a href="www.minbumkim.com">자기소개 웹 페이지</a>
+<a href="www.minbumkim.com">자기소개 웹 페이지</a>
