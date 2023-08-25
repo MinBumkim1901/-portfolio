@@ -55,5 +55,6 @@ function BackPercent() {
         }
     }
 }
+
 frontPercent();
 BackPercent();
