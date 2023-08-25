@@ -20,7 +20,7 @@
 
 
 ## ✨ 구현한 기능 소개
-아래의 2가지 JavaScript 기능이 있는 <a href="www.minbumkim.com">자기소개</a> 웹페이지입니다.
+아래의 2가지 JavaScript 기능이 있는 <a href="https://www.minbumkim.com/">자기소개</a> 웹페이지입니다.
 
 #### 1. 상단 이동 스크롤 버튼
 #### 2. 타이핑 효과
@@ -37,4 +37,4 @@
 <br>
 
 ### 🔗 배포 링크
-<a href="www.minbumkim.com">자기소개 웹 페이지</a>
+<a href="https://www.minbumkim.com/">자기소개 웹 페이지</a>
