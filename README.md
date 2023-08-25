@@ -20,11 +20,11 @@
 #### 3. 퍼센트 채우기
    <br>
 
-## 💄 UI 디자인
+## 🌈 UI 디자인
 ### 디자인
 
 ### 색상
-<img src="images/color.png" alt="색상">
+<img th:src="@{/resources/images/color.png}" alt="색상">
 
 
 <br>
