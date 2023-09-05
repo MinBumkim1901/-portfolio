@@ -8,14 +8,50 @@
   <link rel="shortcut icon" th:href="@{/resources/images/favicon.png}">
   <link rel="stylesheet" th:href="@{/resources/stylesheets/index.css}">
   <link rel="stylesheet" th:href="@{/resources/stylesheets/index-pre.css}">
+  <link rel="stylesheet" th:href="@{/resources/stylesheets/cover.css}">
+  <script defer th:src="@{/resources/scripts/typing.js}"></script>
+  <script defer th:src="@{/resources/scripts/model.js}"></script>
   <script defer th:src="@{/resources/scripts/percent.js}"></script>
   <script defer th:src="@{/resources/scripts/1130pxPercent.js}"></script>
   <title>김민범의 포트폴리오</title>
 </head>
 <body>
+<div id="cover"></div>
+
+<span id="stack" class="front">
+      <span class="step">
+         <span class="stack-step">
+            <span class="step-1">FrontEnd</span>
+            <span class="step-1">BackEnd</span>
+            <span class="step-1">DBMS</span>
+            <button name="close">close</button>
+        </span>
+        <span class="main front">
+              <h3>HTML</h3>
+              <span> 웹 페이지를 구성하는 기본 뼈대를 만들수 있으며
+                      여러 가지 요소와 태그를 이용하여 웹 페이지의 레이아웃과 콘텐츠를 구성할 수 있습니다.</span>
+              <h3>CSS</h3>
+              <span>  HTML로 구조를 생성한 후, CSS를 사용하여 해당 구조에 디자인과 스타일을 적용하여 웹 페이지를 아름답고 사용자 친화적으로 만들 수 있습니다.</span>
+              <h3>JavaScript</h3>
+              <span> XHR을 사용하여 서버로 HTTP 요청을 보내고, 서버로 요청을 처리해 데이터를 응답으로 반환해
+                비동기적인 통신 방식으로 웹 페이지와 통신할수 있습니다</span>
+           </span>
+        <span class="main back">
+              <h3>Java</h3>
+              <span> 자바에서 제공하는 자료구조를 통해 데이터를 효율적으로 처리할수 있고 알고리즘을 통해 문제를 효율적으로 해결할수 있습니다.</span>
+              <h3>Spring Boot</h3>
+              <span>스프링 부트의 MVC를 통해 백엔드와 프론트 엔드 기반의 웹페이지를 개발하고 데이터베이스를 통해 CRUD를 할수 있습니다.</span>
+           </span>
+        <span class="main dbms">
+              <h3>MySQL, MariaDB</h3>
+              <span>사용자 생성, 권한 부여, 암호화 등을 통해 데이터베이스의 보안을 강화할 수 있고,  테이블을 만들어 삽입, 삭제, 수정이 가능하고 제약조건을 통해 불필요한 자료가 입력되는 것을 방지하기 위해 여러가지 규칙을 적용할수 있습니다.</span>
+           </span>
+      </span>
+</span>
+
 
 <!--  메뉴바  -->
-<nav class="menu-bar">
+<nav id="menu-bar">
   <div class="image">
     <img class="face" th:src="@{/resources/images/김민범.jpg}">
     <p class="name">김민범</p>
@@ -28,13 +64,23 @@
     <li class="item"><a class="link" href="#contact">블로그</a></li>
   </ul>
   <ul class="blog-image">
-    <li class="item"><a href="https://github.com/JavaStudyrecord?tab=repositories">
-      <img class="top-git" th:src="@{/resources/images/topmenu-git.png}"></a></li>
-    <span class="git-bubble">Git-Hub</span>
+    <li class="item">
+      <span>
+          <span class="bubble">Git-Hub</span>
+       </span>
+      <a class="links" href="https://github.com/JavaStudyrecord?tab=repositories">
+        <img class="top-git" th:src="@{/resources/images/topmenu-git.png}">
+      </a>
+    </li>
 
-    <li class="item"><a href="https://www.tistory.com/">
-      <img class="top-tisory" th:src="@{/resources/images/topmenu-tistory.png}"></a></li>
-    <span class="tistory-bubble">Tistory</span>
+    <li class="item">
+        <span>
+          <span class="bubble">Tistory</span>
+       </span>
+      <a class="links" href="https://www.tistory.com/">
+      <img class="top-tisory" th:src="@{/resources/images/topmenu-tistory.png}">
+    </a>
+    </li>
   </ul>
 </nav>
 
@@ -43,9 +89,7 @@
 <a name="main"></a>
 <section>
   <div class="intro-box">
-    <div class="first-text">안녕하세요</div>
-    <div class="first-text">개발자 김민범의</div>
-    <div class="first-text">포트폴리오 입니다</div>
+    <span class="first-text"></span>
   </div>
 </section>
 
@@ -99,151 +143,140 @@
         <span class="text"> 배우고 습득하였습니다.</span>
       </div>
     </div>
-    <form id="SkillGraph">
+    <form id="circular-graph">
       <div class="graph">
-        <div class="front">
-          <div class='fronts'>
-            <span class="Front-header">Front-End</span>
+        <div class="stacks">
+          <h2>Front-End</h2>
+          <div class="skills">
             <span class="text"><b>HTML</b></span>
-            <div class="chart HtmlPerCent" id="start"><span class="center"><p id="HTML"></p>
-                        </span>
-              <span id="HtmlSpeech" class="HtmlSpeech">
-                웹 페이지를 구성하는 기본 뼈대를 만들수 있으며
-                여러 가지 요소와 태그를 이용하여 웹 페이지의 레이아웃과 콘텐츠를 구성할 수 있습니다.</span>
+            <div class="chart HtmlPerCent" id="start"><span class="center"><p id="HTML"></p></span>
             </div>
           </div>
 
-          <div class='fronts'>
+          <div class="skills">
             <span class="text"><b>CSS</b></span>
-            <div class="chart CssPerCent"><span class="center"><p id="CSS"></p>
-                        </span>
-              <span id="CssSpeech" class="CssSpeech">
-                HTML로 구조를 생성한 후, CSS를 사용하여 해당 구조에 디자인과 스타일을 적용하여 웹 페이지를 아름답고 사용자 친화적으로 만들 수 있습니다.</span>
+            <div class="chart CssPerCent"><span class="center"><p id="CSS"></p></span>
             </div>
           </div>
 
-          <div class='fronts'>
+          <div class="skills">
             <span class="text"><b>JavaScript</b></span>
-            <div class="chart JavaScriptPerCent"><span class="center"><p id="JavaScript"></p>
-                        </span>
-              <span id="JavaScriptSpeech" class="JavaScriptSpeech">
-                XHR을 사용하여 서버로 HTTP 요청을 보내고, 서버로 요청을 처리해 데이터를 응답으로 반환해
-                비동기적인 통신 방식으로 웹 페이지와 통신할수 있습니다</span>
+            <div class="chart JavaScriptPerCent"><span class="center"><p id="JavaScript"></p></span>
             </div>
           </div>
         </div>
-        <div class="back">
-          <div class='backs'>
-            <span class="Back-header">Back-End</span>
+
+        <div class="stacks">
+          <h2>Back-End</h2>
+          <div class="skills">
             <span class="text"><b>Java</b></span>
-            <div class="chart JavaPerCent"><span class="center"><p id="Java"></p>
-                        </span>
-              <span id="JavaSpeech" class="JavaSpeech">
-                              자바에서 제공하는 자료구조를 통해 데이터를 효율적으로 처리할수 있고 알고리즘을 통해 문제를 효율적으로 해결할수 있습니다.</span>
+            <div class="chart JavaPerCent"><span class="center"><p id="Java"></p></span>
             </div>
           </div>
-
-          <div class='backs'>
-            <span class="text"><b>Maria-DB</b></span>
-            <div class="chart MariaDbPerCent">
-                            <span class="center"><p id="MariaDB"></p>
-                        </span><span id="MariaSpeech" class="MariaSpeech">
-                            테이블을 만들어 삽입, 삭제, 수정이 가능하고 제약조건을 통해 불필요한 자료가 입력되는 것을 방지하기 위해 여러가지 규칙을 적용할수 있습니다. </span>
-            </div>
-          </div>
-
-          <div class='backs'>
-            <span class="text"><b>SpringBoot</b></span>
-            <div class="chart SpringPerCent"><span class="center"><p id="SpringBoot"></p>
-                        </span>
-              <span id="SpringBootSpeech" class="SpringBootSpeech">
-                                스프링 부트의 MVC를 통해 백엔드와 프론트 엔드 기반의 웹페이지를 개발하고 데이터베이스를 통해 CRUD를 할수 있습니다.</span>
+          <div class="skills">
+            <span class="text"><b>Spring Boot</b></span>
+            <div class="chart SpringPerCent"><span class="center"><p id="SpringBoot"></p></span>
             </div>
           </div>
         </div>
+
+        <div class="stacks">
+          <h2>DBMS</h2>
+          <div class="skills">
+            <span class="text"><b>MySQL</b></span>
+            <div class="chart MySql">
+              <span class="center"><p id="MySql"></p></span>
+            </div>
+          </div>
+
+          <div class="skills">
+            <span class="text"><b>MariaDB</b></span>
+            <div class="chart MariaDbPerCent">
+              <span class="center"><p id="MariaDB"></p></span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </form>
     <form id="graph">
       <div class="skill-bar">
         <div class="bar-header">Front-End</div>
-        <div class="front-bar-header">
+
+        <div class="skillBar-header">
           <span class="left">Html</span>
           <span class="frontPercent"></span>
         </div>
-        <div class="front-bar-header">
-        </div>
         <div class="progress-bar">
           <div class="front-progress">
           </div>
         </div>
-        <p class="front-bar-header">
+
+        <div class="skillBar-header">
           <span class="left">CSS</span>
           <span class="frontPercent"></span>
-        </p>
+        </div>
         <div class="progress-bar">
           <div class="front-progress">
           </div>
         </div>
-        <p class="front-bar-header">
+
+        <div class="skillBar-header">
           <span class="left">JavaScript</span>
           <span class="frontPercent"></span>
+        </div>
         <div class="progress-bar">
           <div class="front-progress">
           </div>
         </div>
       </div>
-       <div class="skill-text">
-         <h1>프론트 기술 소개</h1>
-         <h1>HTML</h1>
-         <div><p>웹 페이지를 구성하는 기본 뼈대를 만들수 있으며 여러 가지 요소와 태그를 이용하여
-           웹 페이지의 레이아웃과 콘텐츠를 구성할 수 있습니다.</p></div>
-         <h1>CSS</h1>
-         <div><p> HTML로 구조를 생성한 후, CSS를 사용하여 해당 구조에 디자인과 스타일을 적용하여
-         웹 페이지를 아름답고 사용자 친화적으로 만들 수 있습니다.</p></div>
-         <h1>JavaScript</h1>
-         <div><p>XHR을 사용하여 서버로 HTTP 요청을 보내고, 서버로 요청을 처리해 데이터를 응답으로 반환해
-           비동기적인 통신 방식으로 웹 페이지와 통신할수 있습니다</p></div>
-       </div>
+
       <div class="skill-bar">
-        <p class="bar-header">Back-End</p>
-        <p class="back-bar-header">
-        <p class="front-bar-header">
+        <div class="bar-header">Back-End</div>
+
+        <div class="skillBar-header">
           <span class="left">Java</span>
           <span class="backPercent"></span>
-        </p>
-        <div class="progress-bar ">
-          <div class="back-progress Back">
-          </div>
         </div>
-        <p class="back-bar-header">
-        <p class="front-bar-header">
-          <span class="left">Maria-DB</span>
-          <span class="backPercent"></span>
-        </p>
         <div class="progress-bar">
-          <div class="back-progress Back">
+          <div class="back-progress">
           </div>
         </div>
-        <p class="back-bar-header">
-        <p class="front-bar-header">
+
+        <div class="skillBar-header">
           <span class="left">SpringBoot</span>
           <span class="backPercent"></span>
-        </p>
+        </div>
         <div class="progress-bar">
-          <div class="back-progress Back">
+          <div class="back-progress">
           </div>
         </div>
       </div>
-      <div class="skill-text">
-        <h1>백엔드 기술 소개</h1>
-        <h1>Java</h1>
-        <div><p>자바에서 제공하는 자료구조를 통해 데이터를 효율적으로 처리할수 있고 알고리즘을 통해 문제를 효율적으로 해결할수 있습니다.</p></div>
-        <h1>Maria-DB</h1>
-        <div><p>테이블을 만들어 삽입, 삭제, 수정이 가능하고 제약조건을 통해 불필요한 자료가 입력되는 것을 방지하기 위해 여러가지 규칙을 적용할수 있습니다. </p></div>
-        <h1>SpringBoot</h1>
-        <div><p>스프링 부트의 MVC를 통해 백엔드와 프론트 엔드 기반의 웹페이지를 개발하고 데이터베이스를 통해 CRUD를 할수 있습니다.</p></div>
+
+      <div class="skill-bar">
+        <div class="bar-header">DBMS</div>
+
+        <div class="skillBar-header">
+          <span class="left">MySQL</span>
+          <span class="backPercent"></span>
+        </div>
+        <div class="progress-bar">
+          <div class="back-progress">
+          </div>
+        </div>
+
+        <div class="skillBar-header">
+          <span class="left">Maria-DB</span>
+          <span class="backPercent"></span>
+        </div>
+        <div class="progress-bar">
+          <div class="back-progress">
+          </div>
+        </div>
       </div>
+
     </form>
+    <span class="more">More</span>
   </div>
 </section>
 
@@ -253,40 +286,48 @@
     <h2 class="header-Text">프로젝트</h2>
     <div class="project-Box">
       <img th:src="@{/resources/images/project.png}">
-
       <ul>
         <li><h1>We-Meet</h1></li>
+        <li><h3>참여인원</h3></li>
+        <li>5명(1명 중도포기)</li>
         <li><h3>기간</h3></li>
         <li>2023.06.10 ~ 2023.08.10</li>
         <li><h3>설명</h3></li>
-        <li>관심사 기반 앱에 영감을 얻어 8개의 다양한 카테고리 속에 사람들의
-          만남의 웹 프로젝트
+        <li>관심사를 바탕으로 한 만남의 웹 프로젝트는 8개의 다양한 카테고리를 통해 사람들을 연결합니다.
+          각 카테고리는 공통된 관심사와 활동을 가진 사람들이 모여 함께 시간을 보내며 새로운 경험을 만들 수 있는 기회를 제공합니다.
+          이 플랫폼은 다양한 취향과 새로운 사람들과의 만남을 통해 더욱 풍요로운 삶을 추구하는 분들을 위한 공간으로,
+          함께 소통하고 나아가는 여정을 위한 출발점입니다
         </li>
         <li><h3>사용 기술</h3></li>
         <li>HTML/CSS, JavaScript,Java,MariaDB, SpringBoot, MyBatis</li>
         <div>
-          <a class="code" th:href="@{https://github.com/MinBumkim1901/wemeet}">
-            <p class="project-header button">코드 보기</p></a>
-          <a class="code" th:href="@{https://wemeet.minbumkim.com}">
-            <p class="project-header button">이동하기</p></a>
+          <a class="code" target="_blank" th:href="@{https://github.com/MinBumkim1901/wemeet}">
+            <p class="project-header">코드 보기</p></a>
+          <a class="code" target="_blank" th:href="@{https://wemeet.minbumkim.com}">
+            <p class="project-header">이동하기</p></a>
         </div>
       </ul>
     </div>
+
     <div class="project-Box">
       <img th:src="@{/resources/images/portfolio.png}">
       <ul>
         <li><h1>포트폴리오</h1></li>
+        <li><h3>참여인원</h3></li>
+        <li>1명</li>
         <li><h3>기간</h3></li>
         <li>2023.05.10 ~ 2023.06.10</li>
         <li><h3>설명</h3></li>
-        <li>신입 개발자로서 처음 만든 자기소개 포트폴리오 입니다</li>
+        <li>신입 개발자로서, 제 첫 자기소개 포트폴리오를 소개합니다.
+          이 포트폴리오 제가 공부한 프로그래밍 언어와 기술, 그리고 개인적으로 완성한 프로젝트들을 포함하고 있습니다.
+          이를 통해 저의 능력과 노력을 실제 예시로 보여주고, 신뢰성 있는 개발자로서의 자질을 강조하고자 합니다.</li>
         <li><h3>사용 기술</h3></li>
         <li>HTML/CSS, JavaScript</li>
-        <div class="link">
-          <a class="code" th:href="@{https://github.com/MinBumkim1901/portfolio}">
-            <p class="project-header button">코드 보기</p></a>
-          <a class="code" th:href="@{https://minbumkim.com}">
-            <p class="project-header button">이동하기</p></a>
+        <div>
+          <a class="code" target="_blank" th:href="@{https://github.com/MinBumkim1901/portfolio}">
+            <p class="project-header">코드 보기</p></a>
+          <a class="code" target="_blank" th:href="@{https://minbumkim.com}">
+            <p class="project-header">이동하기</p></a>
         </div>
       </ul>
     </div>
@@ -299,8 +340,8 @@
     <p class="header-Text">블로그</p>
     <div class="blog-image-box">
       <!-- 블로그 이미지 -->
-      <a href="https://github.com/MinBumkim1901"><img class="footer-Git" th:src="@{/resources/images/github.png}"></a>
-      <a href="https://wwwnewinformation.tistory.com/"><img class="footer-Tistory" th:src="@{/resources/images/tistory.png}"></a>
+      <a href="https://github.com/MinBumkim1901"><img class="blogGit" th:src="@{/resources/images/github.png}"></a>
+      <a href="https://wwwnewinformation.tistory.com/"><img class="blogTistory" th:src="@{/resources/images/tistory.png}"></a>
     </div>
   </div>
 </section>
@@ -314,87 +355,5 @@
   </div>
 </footer>
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-<script>
-
-  $(window).on('scroll', function() { //스크롤 이벤트 발생
-    var skillSection = $('#Skills');
-    var graphBar = $('.graph .chart');
-    var sectionPosition = skillSection.offset().top;
-    var graphBarPosition = graphBar.offset().top;
-    var windowHeight = $(window).height();
-    var scrollPosition = $(window).scrollTop() + windowHeight;
-
-    // 그래프바가 보일때 말풍선 fadein 2
-    if (graphBarPosition <= scrollPosition) {
-      $('.HtmlSpeech').css('visibility', 'visible').hide().fadeIn(2000);
-      $('.CssSpeech').css('visibility', 'visible').hide().fadeIn(2000);
-      $('.JavaScriptSpeech').css('visibility', 'visible').hide().fadeIn(2000);
-      $('.JavaSpeech').css('visibility', 'visible').hide().fadeIn(2000);
-      $('.MariaSpeech').css('visibility', 'visible').hide().fadeIn(2000);
-      $('.SpringBootSpeech').css('visibility', 'visible').hide().fadeIn(2000);
-
-      // 발생하고 스크롤이벤트를 제거함으로 다시 스크롤해도 이벤트 발생하지않음
-      $(window).off('scroll');
-    }
-  });
-
-  //top-git 이미지 hover시 말풍선 서서히 나타남
-  function GitFadeInOut() {
-    $('.top-git').hover(
-            function () {
-              $('.git-bubble').css('visibility', 'visible').hide().fadeIn(200);
-
-            },
-            //이미지에서 마우스를 떼면 visibility hidden이 되면서 서서히 사라짐
-            function () {
-              $('.git-bubble').fadeOut(250, function () {
-                $(this).css('visibility', 'hidden');
-              });
-            }
-    );
-  }
-
-  //위와 같은 원리
-  function TistoryFadeInOut() {
-    $('.top-tisory').hover(
-            function () {
-              $('.tistory-bubble').css('visibility', 'visible').hide().fadeIn(300);
-            },
-            function () {
-              $('.tistory-bubble').fadeOut(250, function () {
-                $(this).css('visibility', 'hidden');
-              });
-            }
-    );
-  }
-
-  function GitFilter() {
-    $('.top-git').hover(
-            function () {
-              $(this).css('transition', 'filter 0.5s').css('filter', 'brightness(70%)');
-            },
-            function () {
-              $(this).css('filter', 'none').css('transition', 'filter 1s');
-            }
-    );
-  }
-
-  function TistoryFilter() {
-    $('.top-tisory').hover(
-            function () {
-              $(this).css('transition', 'filter 0.5s').css('filter', 'brightness(70%)');
-            },
-            function () {
-              $(this).css('filter', 'none').css('transition', 'filter 1s');
-            }
-    );
-  }
-
-  GitFadeInOut(); //Git 말풍선 나타내고 사라지는 함수 호출
-  TistoryFadeInOut(); //Tistory 말풍선 나타내고 사라지는 함수 호출
-  GitFilter(); //hover시 필터 씌우고 빼면 필터 사라짐 호출
-  TistoryFilter(); //hover시 필터 씌우고 빼면 필터 사라짐 호출
-</script>
 </body>
 </html>

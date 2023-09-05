@@ -4,8 +4,9 @@ const JavaScriptGraph = document.querySelector('.JavaScriptPerCent');
 const JavaGraph = document.querySelector('.JavaPerCent');
 const MariaDbGraph = document.querySelector('.MariaDbPerCent');
 const SpringBootGraph = document.querySelector('.SpringPerCent');
+const MySqlGraph = document.querySelector('.MySql');
 
-const SkillGraph = document.getElementById('SkillGraph'); //버튼 폼
+const SkillGraph = document.getElementById('circular-graph'); //버튼 폼
 
 let HtmlStart = 0;
 let CssStart = 0;
@@ -13,6 +14,7 @@ let JavaScriptStart = 0;
 let JavaStart = 0;
 let MariaDBStart = 0;
 let SpringBootStart = 0;
+let MySqlStart = 0;
 //퍼센트를 위한 함수
 
 function HTMLPercent() {
@@ -90,7 +92,7 @@ function JavaPercent() {
         var id = setInterval(frame, 20);
 
         function frame() {
-            if (width >= 80) {
+            if (width >= 75) {
                 clearInterval(id);
                 JavaStart = 0;
             } else {
@@ -101,7 +103,7 @@ function JavaPercent() {
     }
 } //Java 그래프 텍스트
 function Java() {
-    makeChart(80, JavaGraph, 'skyblue');
+    makeChart(75, JavaGraph, 'skyblue');
 } //Java 원형그래프바
 
 function MairaDbPercent() {
@@ -112,7 +114,7 @@ function MairaDbPercent() {
         var id = setInterval(frame, 20);
 
         function frame() {
-            if (width >= 80) {
+            if (width >= 75) {
                 clearInterval(id);
                 MariaDBStart = 0;
             } else {
@@ -123,7 +125,7 @@ function MairaDbPercent() {
     }
 } //MariaDB 그래프 텍스트
 function MariaDB() {
-    makeChart(80, MariaDbGraph, 'skyblue');
+    makeChart(75, MariaDbGraph, 'skyblue');
 } //MaiaDB 원형그래프바
 
 function SpringPercent() {
@@ -134,7 +136,7 @@ function SpringPercent() {
         var id = setInterval(frame, 20);
 
         function frame() {
-            if (width >= 80) {
+            if (width >= 75) {
                 clearInterval(id);
                 SpringBootStart = 0;
             } else {
@@ -145,9 +147,30 @@ function SpringPercent() {
     }
 } //SpringBoot 그래프 텍스트
 function SpringBoot() {
-    makeChart(80, SpringBootGraph, 'skyblue');
+    makeChart(75, SpringBootGraph, 'skyblue');
 } //SpringBoot 원형그래프바
 
+function MySqlPercent() {
+    if (MySqlStart === 0) {
+        MySqlStart = 1;
+        var elem = document.getElementById("MySql");
+        var width = 0;
+        var id = setInterval(frame, 20);
+
+        function frame() {
+            if (width >= 75) {
+                clearInterval(id);
+                MySqlStart = 0;
+            } else {
+                width++;
+                elem.innerHTML = width + "%";
+            }
+        }
+    }
+} //SpringBoot 그래프 텍스트
+function MySql() {
+    makeChart(75, MySqlGraph, 'skyblue');
+} //SpringBoot 원형그래프바
 
 const colorFn = (i, classname, color) => {
     classname.style.background = "conic-gradient(" + color + " 0% " + i + "%, #dedede " + i + "% 100%)";
@@ -179,6 +202,8 @@ const observer = new IntersectionObserver(function(entries) {
             MairaDbPercent();
             SpringPercent();
             SpringBoot();
+            MySqlPercent();
+            MySql();
 
             observer.disconnect(); //실행되고 연결 끊어줌
         }
@@ -186,17 +211,6 @@ const observer = new IntersectionObserver(function(entries) {
 });
 
 observer.observe(SkillGraph);
-
-
-
-
-
-
-
-
-
-
-
 
 
 

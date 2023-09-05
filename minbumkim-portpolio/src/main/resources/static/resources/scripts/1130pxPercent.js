@@ -1,5 +1,6 @@
 let front = 0;
 let back = 0;
+
 // 1번씩만 실행하기 위한 변수
 const pro = document.querySelectorAll('.front-progress');
 const pro1 = document.querySelectorAll('.back-progress');
@@ -35,26 +36,28 @@ function BackPercent() {
         back = 1;
         let elem = document.querySelectorAll('.backPercent');
         let width = 0;
-        let id = setInterval(frame, 15);
-        const targetWidth = 80;
+        let id = setInterval(frame, 20);
+        const targetWidth = 75;
         const increment = targetWidth / (1000 / 50); // 증가량 계산
 
         function frame() {
             if (width >= targetWidth) {
                 clearInterval(id);
-                front = 0;
+                back = 0;
             } else {
                 width += increment;
-                for (let i = 0; i < pro.length; i++) {
+                for (let i = 0; i < pro1.length; i++) {
                     pro1[i].style.width = `${width}%`;
                 }
-                    elem[0].innerHTML = width + "%";
-                    elem[1].innerHTML =width + "%";
-                    elem[2].innerHTML = width + "%";
+                elem[0].innerHTML = Math.round(width) + "%";
+                elem[1].innerHTML = Math.round(width) + "%";
+                elem[2].innerHTML = Math.round(width) + "%";
+                elem[3].innerHTML = Math.round(width) + "%";
             }
         }
     }
 }
+
 
 frontPercent();
 BackPercent();
