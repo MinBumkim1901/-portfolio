@@ -20,6 +20,7 @@
 아래의 2가지 JavaScript 기능이 있는 <a href="https://www.minbumkim.com/">자기소개</a> 웹페이지입니다.
 
 #### 1. 타이핑 효과
+
 #### 2. 퍼센트바 채우기
 #### 2-1. 반응형 퍼센트바 채우기
 ![Resoponsive](https://github.com/MinBumkim1901/portfolio/assets/108784591/79b6c715-7975-4878-ad20-040cf2f90be0)
