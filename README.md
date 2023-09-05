@@ -22,7 +22,8 @@
 #### 1. 타이핑 효과
 #### 2. 퍼센트바 채우기
 #### 2-1. 반응형 퍼센트바 채우기
-<img src="./minbumkim-portpolio/src/main/resources/static/resources/videos/Resoponsive.gif">
+![Resoponsive](https://github.com/MinBumkim1901/portfolio/assets/108784591/79b6c715-7975-4878-ad20-040cf2f90be0)
+
 
 #### 3. 모달버튼
    <br>
