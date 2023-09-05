@@ -23,6 +23,8 @@
 ![Project 1](https://github.com/MinBumkim1901/portfolio/assets/108784591/f18b6c11-5892-4ed1-9918-fca50b8a5cb2)
 
 #### 2. 퍼센트바 채우기
+![Project 1 (1)](https://github.com/MinBumkim1901/portfolio/assets/108784591/3efdf8a5-b839-4c5e-bfa5-54710bf30739)
+
 #### 2-1. 반응형 퍼센트바 채우기
 ![Resoponsive](https://github.com/MinBumkim1901/portfolio/assets/108784591/79b6c715-7975-4878-ad20-040cf2f90be0)
 
